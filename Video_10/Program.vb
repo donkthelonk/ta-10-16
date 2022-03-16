@@ -39,15 +39,34 @@ Module Program
         'Console.ReadLine()
 
         'Video 13 - If Statement
+        'Console.WriteLine("What is your name?")
+        'Dim userName As String = Console.ReadLine()
+        'Console.WriteLine("What is your password?")
+        'Dim password As String = Console.ReadLine()
+        'If userName = "Bob" Then
+        '    Console.WriteLine("Hi Bob!")
+        'End If
+        'If password = "burger" Then
+        '    Console.WriteLine("You have entered the correct password!")
+        'End If
+        'Console.ReadLine()
+
+        'Video 14 - Else If and Else
         Console.WriteLine("What is your name?")
         Dim userName As String = Console.ReadLine()
         Console.WriteLine("What is your password?")
         Dim password As String = Console.ReadLine()
         If userName = "Bob" Then
             Console.WriteLine("Hi Bob!")
+        ElseIf userName = "Tim" Then
+            Console.WriteLine("Sup Tim?")
+        Else
+            Console.WriteLine("idk you")
         End If
         If password = "burger" Then
-            Console.WriteLine("You have entered the correct password!")
+            Console.WriteLine("Congrats, " & userName & ". You have been granted access.")
+        Else
+            Console.WriteLine("ACCESS DENIED >>> " & password & " is a dumb password anyway lol")
         End If
         Console.ReadLine()
     End Sub
