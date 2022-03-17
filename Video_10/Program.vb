@@ -71,20 +71,52 @@ Module Program
         'Console.ReadLine()
 
         'Video 15 - Nested If Statements
-        Dim age As Integer = Nothing
-        Dim hasInsurance As Boolean = Nothing
+        'Dim age As Integer = Nothing
+        'Dim hasInsurance As Boolean = Nothing
+        'Console.WriteLine("What is your age?")
+        'age = Console.ReadLine()
+        'Console.WriteLine("Do you have insurance? True/False")
+        'hasInsurance = Console.ReadLine()
+        'If age >= 16 Then
+        '    If hasInsurance = True Then
+        '        Console.WriteLine("You can drive legally.")
+        '    Else
+        '        Console.WriteLine("ILLEGAL")
+        '    End If
+        'Else
+        '    Console.WriteLine("You cannot drive.")
+        'End If
+
+        'Video 16 - Conditional Operators
+        Dim isInKindergarten As Boolean = Nothing
+        Dim canDrink As Boolean = Nothing
+        Dim isSeniorCitizen As Boolean = Nothing
         Console.WriteLine("What is your age?")
-        age = Console.ReadLine()
-        Console.WriteLine("Do you have insurance? True/False")
-        hasInsurance = Console.ReadLine()
-        If age >= 16 Then
-            If hasInsurance = True Then
-                Console.WriteLine("You can drive legally.")
-            Else
-                Console.WriteLine("ILLEGAL")
-            End If
+        Dim age As Integer = Console.ReadLine()
+        Dim outcomeKindergarten As String = Nothing
+        Dim outcomeSenior As String = Nothing
+        Dim outcomeDrink As String = Nothing
+        If age <> 5 Then
+            isInKindergarten = False
+            outcomeKindergarten = "You are not in kindergarten."
         Else
-            Console.WriteLine("You cannot drive.")
+            isInKindergarten = True
+            outcomeKindergarten = "You are in kindergarten."
         End If
+        If age >= 65 Then
+            isSeniorCitizen = True
+            outcomeSenior = "You are a senior citizen."
+        Else
+            isSeniorCitizen = False
+            outcomeSenior = "You are not a senior citizen."
+        End If
+        If age >= 21 Then
+            canDrink = True
+            outcomeDrink = "You can drink."
+        Else
+            canDrink = False
+            outcomeDrink = "You cannot drink."
+        End If
+        Console.WriteLine(outcomeDrink & " " & outcomeSenior & " " & outcomeKindergarten)
     End Sub
 End Module
