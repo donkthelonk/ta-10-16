@@ -52,22 +52,39 @@ Module Program
         'Console.ReadLine()
 
         'Video 14 - Else If and Else
-        Console.WriteLine("What is your name?")
-        Dim userName As String = Console.ReadLine()
-        Console.WriteLine("What is your password?")
-        Dim password As String = Console.ReadLine()
-        If userName = "Bob" Then
-            Console.WriteLine("Hi Bob!")
-        ElseIf userName = "Tim" Then
-            Console.WriteLine("Sup Tim?")
+        'Console.WriteLine("What is your name?")
+        'Dim userName As String = Console.ReadLine()
+        'Console.WriteLine("What is your password?")
+        'Dim password As String = Console.ReadLine()
+        'If userName = "Bob" Then
+        '    Console.WriteLine("Hi Bob!")
+        'ElseIf userName = "Tim" Then
+        '    Console.WriteLine("Sup Tim?")
+        'Else
+        '    Console.WriteLine("idk you")
+        'End If
+        'If password = "burger" Then
+        '    Console.WriteLine("Congrats, " & userName & ". You have been granted access.")
+        'Else
+        '    Console.WriteLine("ACCESS DENIED >>> " & password & " is a dumb password anyway lol")
+        'End If
+        'Console.ReadLine()
+
+        'Video 15 - Nested If Statements
+        Dim age As Integer = Nothing
+        Dim hasInsurance As Boolean = Nothing
+        Console.WriteLine("What is your age?")
+        age = Console.ReadLine()
+        Console.WriteLine("Do you have insurance? True/False")
+        hasInsurance = Console.ReadLine()
+        If age >= 16 Then
+            If hasInsurance = True Then
+                Console.WriteLine("You can drive legally.")
+            Else
+                Console.WriteLine("ILLEGAL")
+            End If
         Else
-            Console.WriteLine("idk you")
+            Console.WriteLine("You cannot drive.")
         End If
-        If password = "burger" Then
-            Console.WriteLine("Congrats, " & userName & ". You have been granted access.")
-        Else
-            Console.WriteLine("ACCESS DENIED >>> " & password & " is a dumb password anyway lol")
-        End If
-        Console.ReadLine()
     End Sub
 End Module
